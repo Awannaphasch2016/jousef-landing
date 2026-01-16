@@ -67,53 +67,58 @@
   }
 } */
 
-/* *=========== Dark Gold theme (jousefmurad.com style) =========== */
+/* *=========== Style B: Light Blue theme (leadflow-marketing.de style) =========== */
+/* Source: https://www.leadflow-marketing.de/
+ * Aesthetic: Professional, trustworthy, clean
+ * Colors: White background, blue-to-indigo gradient accents
+ */
 @layer base {
   :root {
-    /* Light theme - kept for reference but dark is primary */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 5.5%;
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 5.5%;
+    /* Light theme - PRIMARY for this style */
+    --background: 0 0% 100%;           /* #FFFFFF - white */
+    --foreground: 222.2 47.4% 11.2%;   /* #111827 - gray-900 */
+    --card: 0 0% 100%;                 /* white */
+    --card-foreground: 222.2 47.4% 11.2%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 5.5%;
-    --primary: 38 35% 75%;
-    --primary-foreground: 0 0% 5%;
-    --secondary: 38 20% 90%;
-    --secondary-foreground: 0 0% 5%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 38 35% 90%;
-    --accent-foreground: 0 0% 5%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 38 20% 85%;
-    --input: 38 20% 85%;
-    --ring: 38 35% 75%;
-    --radius: 0.5rem;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 221.2 83.2% 53.3%;      /* #2563EB - blue-600 */
+    --primary-foreground: 0 0% 100%;   /* white text on blue */
+    --secondary: 220 14.3% 95.9%;      /* #F3F4F6 - gray-100 */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 220 14.3% 95.9%;          /* gray-100 */
+    --muted-foreground: 220 8.9% 46.1%; /* #6B7280 - gray-500 */
+    --accent: 238.7 83.5% 66.7%;       /* #6366F1 - indigo-500 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;      /* red-500 */
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;             /* #E5E7EB - gray-200 */
+    --input: 220 13% 91%;
+    --ring: 221.2 83.2% 53.3%;         /* blue-600 */
+    --radius: 0.625rem;                /* 10px - slightly more rounded */
   }
 
+  /* Dark mode disabled for this style - always use light */
   .dark {
-    /* Primary dark theme - #0E0E0E background with #DAC5A7 gold accents */
-    --background: 0 0% 5.5%;
-    --foreground: 38 25% 90%;
-    --card: 0 0% 8%;
-    --card-foreground: 38 25% 90%;
-    --popover: 0 0% 7%;
-    --popover-foreground: 38 25% 90%;
-    --primary: 38 35% 75%;
-    --primary-foreground: 0 0% 5%;
-    --secondary: 38 20% 20%;
-    --secondary-foreground: 38 25% 90%;
-    --muted: 0 0% 12%;
-    --muted-foreground: 38 15% 65%;
-    --accent: 38 20% 15%;
-    --accent-foreground: 38 25% 90%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
-    --border: 38 15% 18%;
-    --input: 38 15% 18%;
-    --ring: 38 35% 75%;
+    /* Keep same light values - this style is light-only */
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 238.7 83.5% 66.7%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221.2 83.2% 53.3%;
   }
 }
 
