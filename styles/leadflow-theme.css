@@ -1,0 +1,174 @@
+/* Leadflow Marketing Theme - Style B
+ * Source: https://www.leadflow-marketing.de/
+ * Light theme with blue-to-indigo gradient accents
+ */
+
+@layer base {
+  :root {
+    /* Background & Foreground */
+    --background: 0 0% 100%;           /* #FFFFFF - white */
+    --foreground: 222.2 47.4% 11.2%;   /* #111827 - gray-900 */
+
+    /* Primary (Blue) */
+    --primary: 221.2 83.2% 53.3%;      /* #2563EB - blue-600 */
+    --primary-foreground: 0 0% 100%;   /* white */
+
+    /* Secondary (Light Gray) */
+    --secondary: 220 14.3% 95.9%;      /* #F3F4F6 - gray-100 */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    /* Muted */
+    --muted: 220 14.3% 95.9%;          /* #F3F4F6 - gray-100 */
+    --muted-foreground: 220 8.9% 46.1%; /* #6B7280 - gray-500 */
+
+    /* Accent (Indigo) */
+    --accent: 238.7 83.5% 66.7%;       /* #6366F1 - indigo-500 */
+    --accent-foreground: 0 0% 100%;
+
+    /* Card */
+    --card: 0 0% 100%;                 /* white */
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    /* Border & Input */
+    --border: 220 13% 91%;             /* #E5E7EB - gray-200 */
+    --input: 220 13% 91%;
+    --ring: 221.2 83.2% 53.3%;         /* blue-600 */
+
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;      /* red-500 */
+    --destructive-foreground: 0 0% 100%;
+
+    /* Radius */
+    --radius: 0.625rem;                /* 10px */
+
+    /* Custom: Gradient colors */
+    --gradient-start: 221.2 83.2% 53.3%;  /* blue-600 */
+    --gradient-end: 238.7 83.5% 66.7%;    /* indigo-500 */
+  }
+
+  /* No dark mode override - this is a light theme */
+  .dark {
+    /* Keep light theme colors for this style */
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    /* ... same as :root */
+  }
+}
+
+@layer components {
+  /* Primary Gradient Button */
+  .btn-gradient {
+    @apply inline-flex items-center justify-center gap-2;
+    @apply px-6 py-3 rounded-lg font-semibold;
+    @apply text-white;
+    @apply shadow-lg hover:shadow-xl;
+    @apply transition-all duration-200;
+    @apply hover:scale-105;
+    background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--accent)));
+  }
+
+  .btn-gradient:hover {
+    background: linear-gradient(to right,
+      hsl(221.2 83.2% 47%), /* blue-700 */
+      hsl(238.7 83.5% 58%)  /* indigo-600 */
+    );
+  }
+
+  /* Gradient Text */
+  .text-gradient {
+    background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Card with Border */
+  .card-bordered {
+    @apply bg-card border-2 border-gray-300 rounded-xl;
+    @apply shadow-xl hover:shadow-2xl transition-shadow;
+  }
+
+  /* Icon Badge */
+  .icon-badge {
+    @apply w-10 h-10 rounded-lg flex items-center justify-center;
+  }
+
+  .icon-badge-blue {
+    @apply bg-blue-100 text-blue-600;
+  }
+
+  .icon-badge-yellow {
+    @apply bg-yellow-100 text-yellow-600;
+  }
+
+  .icon-badge-purple {
+    @apply bg-purple-100 text-purple-600;
+  }
+
+  .icon-badge-green {
+    @apply bg-green-100 text-green-600;
+  }
+
+  /* Glow Effect */
+  .glow-effect {
+    @apply absolute -inset-1 rounded-2xl blur opacity-40;
+    background: linear-gradient(to right,
+      hsl(213.3 96.9% 87.3%), /* blue-200 */
+      hsl(231.4 93.9% 88%)    /* indigo-200 */
+    );
+  }
+
+  /* Navbar Glass Effect */
+  .navbar-glass {
+    @apply fixed top-0 left-0 right-0 z-50;
+    @apply bg-white/95 backdrop-blur-lg;
+    @apply border-b border-gray-200;
+    @apply shadow-sm;
+  }
+
+  /* Section Backgrounds */
+  .section-light {
+    @apply bg-white;
+  }
+
+  .section-alt {
+    @apply bg-gradient-to-b from-white to-gray-50;
+  }
+
+  .section-dark {
+    @apply text-white;
+    background: linear-gradient(135deg,
+      hsl(217.2 32.6% 17.5%), /* slate-800 */
+      hsl(222.2 47.4% 11.2%), /* slate-900 */
+      hsl(217.2 32.6% 17.5%)  /* slate-800 */
+    );
+  }
+
+  /* FAQ Accordion Item */
+  .faq-item {
+    @apply w-full px-6 py-6 text-left;
+    @apply flex items-center justify-between gap-4;
+    @apply hover:bg-gray-50 transition-colors;
+    @apply border-b border-gray-200;
+  }
+}
+
+@layer utilities {
+  /* Section spacing */
+  .section-spacing {
+    @apply py-24;
+  }
+
+  .section-spacing-lg {
+    @apply py-32;
+  }
+
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6;
+  }
+}

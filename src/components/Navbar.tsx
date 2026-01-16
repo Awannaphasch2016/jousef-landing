@@ -20,17 +20,20 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-background/80 backdrop-blur-md border-b border-border/40">
+    <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-100">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-16 px-4 w-screen flex justify-between items-center">
-          {/* Logo - Signature Style */}
+          {/* Logo - Clean text style like Leadflow */}
           <NavigationMenuItem className="font-bold flex">
             <a
               rel="noreferrer noopener"
               href="/"
-              className="font-display italic text-xl text-primary hover:text-primary/80 transition-colors"
+              className="flex items-center gap-2 text-lg font-semibold text-foreground hover:text-primary transition-colors"
             >
-              {siteConfig.name}
+              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                <span className="text-white text-sm font-bold">JM</span>
+              </div>
+              <span className="hidden sm:inline">{siteConfig.name}</span>
             </a>
           </NavigationMenuItem>
 
@@ -91,15 +94,17 @@ export const Navbar = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* CTA Button - Leadflow style with arrow */}
           <div className="hidden md:flex">
-            <Button asChild size="sm" className="px-6">
+            <Button asChild size="sm" className="px-6 shadow-sm hover:shadow-md transition-shadow">
               <a
                 href={siteConfig.cta.href}
                 target="_blank"
                 rel="noreferrer"
+                className="flex items-center gap-2"
               >
                 {siteConfig.cta.text}
+                <span>→</span>
               </a>
             </Button>
           </div>

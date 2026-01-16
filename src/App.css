@@ -67,34 +67,35 @@
   }
 } */
 
-/* *=========== Style B: Light Blue theme (leadflow-marketing.de style) =========== */
+/* *=========== Style B: Leadflow-Marketing Style =========== */
 /* Source: https://www.leadflow-marketing.de/
- * Aesthetic: Professional, trustworthy, clean
- * Colors: White background, blue-to-indigo gradient accents
+ * Aesthetic: Professional, modern, trustworthy
+ * Colors: White background, blue-purple gradient accents
+ * Layout: Two-column hero, floating stat badges, clean sections
  */
 @layer base {
   :root {
     /* Light theme - PRIMARY for this style */
-    --background: 0 0% 100%;           /* #FFFFFF - white */
+    --background: 0 0% 100%;           /* #FFFFFF - pure white */
     --foreground: 222.2 47.4% 11.2%;   /* #111827 - gray-900 */
     --card: 0 0% 100%;                 /* white */
     --card-foreground: 222.2 47.4% 11.2%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 47.4% 11.2%;
-    --primary: 221.2 83.2% 53.3%;      /* #2563EB - blue-600 */
-    --primary-foreground: 0 0% 100%;   /* white text on blue */
+    --primary: 243 75% 59%;            /* #5B5BD6 - blue-purple (Leadflow style) */
+    --primary-foreground: 0 0% 100%;   /* white text on primary */
     --secondary: 220 14.3% 95.9%;      /* #F3F4F6 - gray-100 */
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 220 14.3% 95.9%;          /* gray-100 */
     --muted-foreground: 220 8.9% 46.1%; /* #6B7280 - gray-500 */
-    --accent: 238.7 83.5% 66.7%;       /* #6366F1 - indigo-500 */
+    --accent: 243 75% 59%;             /* Match primary for consistency */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;      /* red-500 */
     --destructive-foreground: 0 0% 100%;
     --border: 220 13% 91%;             /* #E5E7EB - gray-200 */
     --input: 220 13% 91%;
-    --ring: 221.2 83.2% 53.3%;         /* blue-600 */
-    --radius: 0.625rem;                /* 10px - slightly more rounded */
+    --ring: 243 75% 59%;               /* Match primary */
+    --radius: 0.75rem;                 /* 12px - rounded corners like Leadflow */
   }
 
   /* Dark mode disabled for this style - always use light */
@@ -106,19 +107,19 @@
     --card-foreground: 222.2 47.4% 11.2%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 47.4% 11.2%;
-    --primary: 221.2 83.2% 53.3%;
+    --primary: 243 75% 59%;
     --primary-foreground: 0 0% 100%;
     --secondary: 220 14.3% 95.9%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 220 14.3% 95.9%;
     --muted-foreground: 220 8.9% 46.1%;
-    --accent: 238.7 83.5% 66.7%;
+    --accent: 243 75% 59%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 221.2 83.2% 53.3%;
+    --ring: 243 75% 59%;
   }
 }
 
