@@ -1,27 +1,39 @@
 /**
- * Landing Page - 14-Section Psychological Framework
+ * Landing Page - Leadflow-Marketing Style
+ * Structure: Matches https://www.leadflow-marketing.de/
  * Content: German - B2B Process Architecture
- * Style: jousefmurad.com (dark theme, gold accents)
  */
 
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
-import { Sponsors } from "./components/Sponsors"; // Section 2: Trust Strip
-import { EmotionalReframe } from "./components/EmotionalReframe"; // Section 3
-import { ProblemMirror } from "./components/ProblemMirror"; // Section 4
-import { Consequences } from "./components/Consequences"; // Section 5
-import { FalseSolutions } from "./components/FalseSolutions"; // Section 6
-import { Differentiator } from "./components/Differentiator"; // Section 7
-import { Outcomes } from "./components/Outcomes"; // Section 8
-import { Services } from "./components/Services"; // Section 9: Implementation Areas
-import { Timeline } from "./components/Timeline"; // Section 10: Process
-import { Testimonials } from "./components/Testimonials"; // Section 11: Social Proof
-import { FAQ } from "./components/FAQ"; // Section 13
-import { Cta } from "./components/Cta"; // Sections 12 + 14: ROI/Urgency + Final CTA
+import { DemoProjects } from "./components/DemoProjects"; // NEW: Portfolio showcase
+import { LocalTrust } from "./components/LocalTrust"; // NEW: Personal trust section
+import { ProblemMirror } from "./components/ProblemMirror"; // Pain points grid
+import { ProblemSolution } from "./components/ProblemSolution"; // NEW: Dark problem/solution comparison
+import { TargetAudience } from "./components/TargetAudience"; // NEW: "Für wen wir arbeiten" + Benefits
+import { SuccessStories } from "./components/SuccessStories"; // NEW: Dark testimonials with logos
+import { Timeline } from "./components/Timeline"; // Process methodology
+import { FAQ } from "./components/FAQ"; // FAQ accordion
+import { Cta } from "./components/Cta"; // Final CTA
 import { Footer } from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { AvailableIndicator } from "./components/AvailableIndicator";
 import "./App.css";
+
+/**
+ * Section Order (Matching Leadflow):
+ * 1. Hero - Two-column with video + floating stats
+ * 2. Demo Projects - Portfolio showcase
+ * 3. Local Trust - Personal credibility
+ * 4. Problems - Pain points "Deine Herausforderungen"
+ * 5. Problem/Solution - Dark gradient comparison
+ * 6. Target Audience - "Für wen wir arbeiten" + Benefits
+ * 7. Success Stories - Dark testimonials (Erfolgsgeschichten)
+ * 8. Process Timeline - "Dein Weg zur perfekten Website"
+ * 9. FAQ - Frequently asked questions
+ * 10. CTA - Final call-to-action
+ * 11. Footer
+ */
 
 function App() {
   return (
@@ -29,29 +41,23 @@ function App() {
       <Navbar />
       {/* Section 1: Hero */}
       <Hero />
-      {/* Section 2: Trust Strip (Metrics + Logos) */}
-      <Sponsors />
-      {/* Section 3: Emotional Reframe */}
-      <EmotionalReframe />
-      {/* Section 4: Problem Mirror */}
+      {/* Section 2: Demo Projects (Portfolio) */}
+      <DemoProjects />
+      {/* Section 3: Local Trust (Personal credibility) */}
+      <LocalTrust />
+      {/* Section 4: Problems (Pain points) */}
       <ProblemMirror />
-      {/* Section 5: Consequences */}
-      <Consequences />
-      {/* Section 6: False Solutions */}
-      <FalseSolutions />
-      {/* Section 7: Core Differentiator */}
-      <Differentiator />
-      {/* Section 8: Outcomes */}
-      <Outcomes />
-      {/* Section 9: Implementation Areas (Services) */}
-      <Services />
-      {/* Section 10: Process (Timeline) */}
+      {/* Section 5: Problem/Solution (Dark gradient comparison) */}
+      <ProblemSolution />
+      {/* Section 6: Target Audience + Benefits */}
+      <TargetAudience />
+      {/* Section 7: Success Stories (Dark testimonials) */}
+      <SuccessStories />
+      {/* Section 8: Process Timeline */}
       <Timeline />
-      {/* Section 11: Social Proof (Testimonials) */}
-      <Testimonials />
-      {/* Section 13: FAQ */}
+      {/* Section 9: FAQ */}
       <FAQ />
-      {/* Sections 12 + 14: ROI/Urgency + Final CTA */}
+      {/* Section 10: Final CTA */}
       <Cta />
       <Footer />
       <ScrollToTop />
