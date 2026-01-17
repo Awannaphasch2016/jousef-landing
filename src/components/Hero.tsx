@@ -34,9 +34,9 @@ export const Hero = () => {
       {/* Main hero content */}
       <div className="container pb-16 md:pb-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left side - Video/Image area */}
-          <div className="relative order-2 lg:order-1">
-            {/* Video thumbnail container - Leadflow style: shows actual person */}
+          {/* Left side - Video/Image area with stats BELOW (Leadflow layout) */}
+          <div className="order-2 lg:order-1">
+            {/* Video thumbnail container - separate block */}
             <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 shadow-2xl">
               {/* Real person image like Leadflow hero */}
               <img
@@ -52,13 +52,13 @@ export const Hero = () => {
               </div>
             </div>
 
-            {/* Stats badges - positioned around video */}
-            <div className="hidden md:block">
-              {/* Top-left badge */}
-              <div className="absolute -left-4 top-8 bg-white rounded-xl shadow-lg p-4 border border-slate-100">
+            {/* Stats 2×2 grid BELOW video (Leadflow spatial layout) */}
+            <div className="grid grid-cols-2 gap-4 mt-6">
+              {/* Stat 1: Projects */}
+              <div className="bg-white rounded-xl shadow-lg p-4 border border-slate-100">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Check className="w-5 h-5 text-primary" />
+                    <Award className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <div className="text-xl font-bold text-foreground">{heroStats[0].value}</div>
@@ -67,8 +67,8 @@ export const Hero = () => {
                 </div>
               </div>
 
-              {/* Top-right badge */}
-              <div className="absolute -right-4 top-8 bg-white rounded-xl shadow-lg p-4 border border-slate-100">
+              {/* Stat 2: Personal Support */}
+              <div className="bg-white rounded-xl shadow-lg p-4 border border-slate-100">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center">
                     <Users className="w-5 h-5 text-amber-600" />
@@ -80,8 +80,8 @@ export const Hero = () => {
                 </div>
               </div>
 
-              {/* Bottom-left badge */}
-              <div className="absolute -left-4 bottom-8 bg-white rounded-xl shadow-lg p-4 border border-slate-100">
+              {/* Stat 3: Timeline */}
+              <div className="bg-white rounded-xl shadow-lg p-4 border border-slate-100">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
                     <Clock className="w-5 h-5 text-emerald-600" />
@@ -93,8 +93,8 @@ export const Hero = () => {
                 </div>
               </div>
 
-              {/* Bottom-right badge */}
-              <div className="absolute -right-4 bottom-8 bg-white rounded-xl shadow-lg p-4 border border-slate-100">
+              {/* Stat 4: Results */}
+              <div className="bg-white rounded-xl shadow-lg p-4 border border-slate-100">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Shield className="w-5 h-5 text-primary" />
@@ -105,16 +105,6 @@ export const Hero = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Mobile stats grid */}
-            <div className="grid grid-cols-2 gap-3 mt-6 md:hidden">
-              {heroStats.map((stat, idx) => (
-                <div key={idx} className="bg-white rounded-lg shadow p-3 border border-slate-100">
-                  <div className="text-lg font-bold text-foreground">{stat.value}</div>
-                  <div className="text-xs text-muted-foreground">{stat.label}</div>
-                </div>
-              ))}
             </div>
           </div>
 
