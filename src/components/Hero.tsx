@@ -21,11 +21,11 @@ const heroFeatures = [
 export const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
-      {/* Top badge */}
+      {/* Top badge - Leadflow style: filled gradient background */}
       <div className="container pt-8">
         <div className="flex justify-center md:justify-end mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-indigo-500 text-white text-sm font-medium shadow-md">
+            <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
             Prozessarchitektur | Für B2B-Unternehmen
           </div>
         </div>
@@ -36,12 +36,12 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left side - Video/Image area */}
           <div className="relative order-2 lg:order-1">
-            {/* Video thumbnail container */}
+            {/* Video thumbnail container - Leadflow style: shows actual person */}
             <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 shadow-2xl">
-              {/* Placeholder video thumbnail */}
+              {/* Real person image like Leadflow hero */}
               <img
-                src="https://via.placeholder.com/640x360/1e293b/64748b?text=Video+Preview"
-                alt="Prozessarchitektur Vorstellung"
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=640&h=360&fit=crop&crop=face"
+                alt="Prozessarchitektur Experte"
                 className="w-full h-full object-cover"
               />
               {/* Play button overlay */}
@@ -120,11 +120,11 @@ export const Hero = () => {
 
           {/* Right side - Text content */}
           <div className="order-1 lg:order-2 space-y-6">
-            {/* Main heading */}
+            {/* Main heading - Leadflow style: serif font for italic accent */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
               {siteConfig.title}
               <br />
-              <span className="text-primary italic">{siteConfig.titleAccent}</span>
+              <span className="text-primary italic font-display">{siteConfig.titleAccent}</span>
             </h1>
 
             {/* Subheadline */}
