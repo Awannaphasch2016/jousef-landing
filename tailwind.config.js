@@ -17,12 +17,12 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['Satoshi', 'system-ui', 'sans-serif'],
-        display: ['Georgia', 'Times New Roman', 'serif'],
+        sans: ['Open Sans', 'system-ui', 'sans-serif'],  // GigRadar uses Open Sans
       },
-      letterSpacing: {
-        elegant: '0.05em',
-        wide: '0.1em',
+      fontSize: {
+        // GigRadar-style large headings
+        'display': ['4.5rem', { lineHeight: '1.1', fontWeight: '600' }],  // ~70px
+        'display-sm': ['2.75rem', { lineHeight: '1.15', fontWeight: '600' }],  // ~43px
       },
       colors: {
         border: "hsl(var(--border))",

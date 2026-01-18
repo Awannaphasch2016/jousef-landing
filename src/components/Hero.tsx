@@ -1,60 +1,134 @@
 import { Button } from "./ui/button";
-import { siteConfig } from "@/config/content";
-import { ArrowDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+
+// Floating platform icons for GigRadar-style hero
+const floatingIcons = [
+  { icon: "in", label: "LinkedIn", position: "top-20 right-[15%]", delay: "0s" },
+  { icon: "up", label: "Upwork", position: "top-32 right-[25%]", delay: "0.2s" },
+  { icon: "★", label: "Rating", position: "top-16 right-[35%]", delay: "0.4s" },
+  { icon: "✓", label: "Qualified", position: "top-40 right-[10%]", delay: "0.1s" },
+  { icon: "📅", label: "Schedule", position: "bottom-32 right-[20%]", delay: "0.3s" },
+];
 
 export const Hero = () => {
   return (
-    <section className="container flex flex-col items-center justify-center min-h-[90vh] py-20 md:py-32">
-      {/* Headshot */}
-      <div className="relative mb-8">
-        <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-primary/20 bg-muted">
-          {/* Replace with your actual photo */}
-          <img
-            src="https://via.placeholder.com/200x200?text=Photo"
-            alt={siteConfig.name}
-            className="w-full h-full object-cover"
-          />
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Subtle gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-white to-blue-50/30 -z-10" />
+
+      <div className="container">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Content */}
+          <div className="space-y-8">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full border border-blue-100">
+              <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <span className="text-sm font-medium text-primary">AI Lead Generation Platform</span>
+            </div>
+
+            {/* Headline with mixed colors - GigRadar style */}
+            <h1 className="text-display leading-tight">
+              <span className="text-foreground">Your </span>
+              <span className="text-primary">AI</span>
+              <br />
+              <span className="text-primary">Business</span>
+              <br />
+              <span className="text-primary">Manager</span>
+              <br />
+              <span className="text-foreground">for Upwork</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
+              Extend your team with an AI-powered bidder, real-time job feed alerts,
+              conversion analytics, and profile optimization tech!
+            </p>
+
+            {/* CTA + Social Proof */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+              <Button
+                size="lg"
+                className="px-8 py-6 text-base font-semibold rounded-full bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-primary shadow-lg shadow-primary/25"
+              >
+                Get a Demo
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+
+              {/* Trustpilot-style rating */}
+              <div className="flex items-center gap-3">
+                <div className="flex flex-col">
+                  <span className="text-sm font-semibold text-foreground">Excellent</span>
+                  <div className="flex gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <div key={i} className="w-5 h-5 bg-green-500 flex items-center justify-center">
+                        <span className="text-white text-xs">★</span>
+                      </div>
+                    ))}
+                  </div>
+                  <span className="text-xs text-muted-foreground">Based on 150 reviews</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: Floating Icons Visual */}
+          <div className="relative h-[500px] hidden lg:block">
+            {/* Central workflow diagram placeholder */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-64 h-64 bg-gradient-to-br from-blue-100 to-blue-50 rounded-3xl border border-blue-200/50 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-3">
+                    <span className="text-3xl">✨</span>
+                  </div>
+                  <span className="text-sm font-medium text-primary">Qualification</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating platform badges */}
+            {floatingIcons.map((item, index) => (
+              <div
+                key={index}
+                className={`absolute ${item.position} animate-float`}
+                style={{ animationDelay: item.delay }}
+              >
+                <div className="px-4 py-2 bg-white rounded-xl shadow-lg border border-gray-100 flex items-center gap-2">
+                  <span className="text-lg">{item.icon}</span>
+                  <span className="text-sm font-medium text-foreground">{item.label}</span>
+                </div>
+              </div>
+            ))}
+
+            {/* Connection lines decoration */}
+            <svg className="absolute inset-0 w-full h-full -z-10" viewBox="0 0 400 400">
+              <path
+                d="M 100 200 Q 150 150 200 200 T 300 200"
+                fill="none"
+                stroke="hsl(var(--primary))"
+                strokeWidth="1"
+                strokeDasharray="5,5"
+                opacity="0.3"
+              />
+            </svg>
+          </div>
         </div>
-        {/* Decorative ring */}
-        <div className="absolute inset-0 rounded-full border border-primary/10 scale-110" />
       </div>
 
-      {/* Title */}
-      <div className="text-center space-y-4 max-w-3xl">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-elegant">
-          <span className="text-foreground">{siteConfig.title}</span>
-          <br />
-          <span className="font-display italic text-primary">
-            {siteConfig.titleAccent}
-          </span>
-        </h1>
-
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          {siteConfig.tagline}
-        </p>
+      {/* Bottom feature bar */}
+      <div className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-white/80 backdrop-blur-sm">
+        <div className="container py-4">
+          <div className="flex items-center justify-center gap-8 text-sm text-muted-foreground">
+            {["Self-Improve", "Send Follow-Ups", "Define Your Niche", "Manage Budgets", "Manage Profiles"].map((feature, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <div className="w-6 h-6 bg-blue-50 rounded flex items-center justify-center">
+                  <span className="text-primary text-xs">✓</span>
+                </div>
+                <span>{feature}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-
-      {/* CTA Button */}
-      <div className="mt-10">
-        <Button
-          asChild
-          size="lg"
-          className="px-8 py-6 text-base font-medium tracking-wide"
-        >
-          <a href={siteConfig.cta.href} target="_blank" rel="noreferrer">
-            {siteConfig.cta.text}
-          </a>
-        </Button>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="mt-16 md:mt-24 flex flex-col items-center gap-2 text-muted-foreground">
-        <ArrowDown className="w-4 h-4 animate-bounce" />
-        <span className="text-xs tracking-widest uppercase">My Services</span>
-      </div>
-
-      {/* Subtle background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -z-10" />
     </section>
   );
 };

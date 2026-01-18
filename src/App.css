@@ -67,53 +67,53 @@
   }
 } */
 
-/* *=========== Dark Gold theme (jousefmurad.com style) =========== */
+/* *=========== GigRadar.io Style - Light Blue SaaS Theme =========== */
 @layer base {
   :root {
-    /* Light theme - kept for reference but dark is primary */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 5.5%;
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 5.5%;
+    /* Light theme with blue gradient accents */
+    --background: 0 0% 100%;              /* Pure white #FFFFFF */
+    --foreground: 220 20% 20%;            /* Dark charcoal for text */
+    --card: 210 40% 98%;                  /* Very light blue-gray */
+    --card-foreground: 220 20% 20%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 5.5%;
-    --primary: 38 35% 75%;
-    --primary-foreground: 0 0% 5%;
-    --secondary: 38 20% 90%;
-    --secondary-foreground: 0 0% 5%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 38 35% 90%;
-    --accent-foreground: 0 0% 5%;
+    --popover-foreground: 220 20% 20%;
+    --primary: 213 90% 55%;               /* GigRadar blue #2563EB */
+    --primary-foreground: 0 0% 100%;      /* White text on blue */
+    --secondary: 210 40% 96%;             /* Light blue-gray */
+    --secondary-foreground: 220 20% 20%;
+    --muted: 210 30% 95%;                 /* Subtle blue-gray background */
+    --muted-foreground: 220 10% 50%;      /* Medium gray text */
+    --accent: 213 90% 55%;                /* Same as primary blue */
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 38 20% 85%;
-    --input: 38 20% 85%;
-    --ring: 38 35% 75%;
-    --radius: 0.5rem;
+    --border: 210 30% 90%;                /* Light border */
+    --input: 210 30% 90%;
+    --ring: 213 90% 55%;                  /* Blue focus ring */
+    --radius: 0.75rem;                    /* Slightly more rounded */
   }
 
+  /* Dark theme - not primary for GigRadar style but kept for toggle */
   .dark {
-    /* Primary dark theme - #0E0E0E background with #DAC5A7 gold accents */
-    --background: 0 0% 5.5%;
-    --foreground: 38 25% 90%;
-    --card: 0 0% 8%;
-    --card-foreground: 38 25% 90%;
-    --popover: 0 0% 7%;
-    --popover-foreground: 38 25% 90%;
-    --primary: 38 35% 75%;
-    --primary-foreground: 0 0% 5%;
-    --secondary: 38 20% 20%;
-    --secondary-foreground: 38 25% 90%;
-    --muted: 0 0% 12%;
-    --muted-foreground: 38 15% 65%;
-    --accent: 38 20% 15%;
-    --accent-foreground: 38 25% 90%;
+    --background: 220 25% 10%;
+    --foreground: 210 40% 98%;
+    --card: 220 25% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 213 90% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 213 90% 60%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
-    --border: 38 15% 18%;
-    --input: 38 15% 18%;
-    --ring: 38 35% 75%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 213 90% 60%;
   }
 }
 
