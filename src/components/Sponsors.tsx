@@ -1,10 +1,12 @@
 // GigRadar-style client logos section
+// Actual client agency logos from GigRadar.io
 const clientLogos = [
-  { name: "Upwork", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Upwork-logo.svg" },
-  { name: "Fiverr", logo: "https://upload.wikimedia.org/wikipedia/commons/1/18/Fiverr_Logo_09.2020.svg" },
-  { name: "LinkedIn", logo: "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" },
-  { name: "Zapier", logo: "https://cdn.worldvectorlogo.com/logos/zapier.svg" },
-  { name: "Slack", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" },
+  { name: "Code Motion", logo: "/logos/codemotion.svg" },
+  { name: "Requestum", logo: "/logos/requestum.svg" },
+  { name: "PeCode", logo: "/logos/pecode.svg" },
+  { name: "BN Digital", logo: "/logos/bn-digital.svg" },
+  { name: "EZops", logo: "/logos/ezops.svg" },
+  { name: "LitsLink", logo: "/logos/litslink.svg" },
 ];
 
 export const Sponsors = () => {
@@ -16,7 +18,7 @@ export const Sponsors = () => {
       {/* Logo strip header */}
       <div className="container">
         <p className="text-center text-sm text-muted-foreground mb-8">
-          Trusted by agencies and freelancers worldwide
+          Join 800+ Scaling Upwork Agencies
         </p>
       </div>
 
