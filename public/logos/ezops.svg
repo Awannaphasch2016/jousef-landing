@@ -1,5 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
-  <text x="100" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#333">
-    EZops
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <!-- Professional logo design for EZops -->
+  <defs>
+    <linearGradient id="ezGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A855F7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9333EA;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Icon: Simplified ops/deployment symbol -->
+  <g transform="translate(15, 15)">
+    <circle cx="15" cy="15" r="12" stroke="url(#ezGradient)" stroke-width="2.5" fill="none"/>
+    <path d="M 15 5 L 15 15 L 22 15" stroke="url(#ezGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="15" cy="15" r="2" fill="#A855F7"/>
+  </g>
+
+  <!-- Text: EZ ops -->
+  <text x="55" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#A855F7">
+    EZ
+  </text>
+  <text x="85" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="300" fill="#2C3E50">
+    ops
   </text>
 </svg>

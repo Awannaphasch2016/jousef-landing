@@ -97,7 +97,7 @@ export const StatsTrust = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.5 } // Match GigRadar.io (50% visibility trigger)
     );
 
     if (sectionRef.current) {

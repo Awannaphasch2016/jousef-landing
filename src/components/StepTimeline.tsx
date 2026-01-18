@@ -65,7 +65,7 @@ export const StepTimeline = () => {
         });
       },
       {
-        threshold: 0.2, // Trigger when 20% of element is visible
+        threshold: 0.5, // Match GigRadar.io (50% visibility trigger)
         rootMargin: "0px 0px -100px 0px", // Start animation slightly before element fully in view
       }
     );
