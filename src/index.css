@@ -9,7 +9,8 @@ html {
 
 /* Fade in from bottom */
 .animate-fadeInUp {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeInUp 0.6s ease-out both;
+  opacity: 1; /* Override .scroll-animate opacity */
 }
 
 @keyframes fadeInUp {
@@ -25,7 +26,8 @@ html {
 
 /* Fade in from left */
 .animate-fadeInLeft {
-  animation: fadeInLeft 0.6s ease-out forwards;
+  animation: fadeInLeft 0.6s ease-out both;
+  opacity: 1;
 }
 
 @keyframes fadeInLeft {
@@ -41,7 +43,8 @@ html {
 
 /* Fade in from right */
 .animate-fadeInRight {
-  animation: fadeInRight 0.6s ease-out forwards;
+  animation: fadeInRight 0.6s ease-out both;
+  opacity: 1;
 }
 
 @keyframes fadeInRight {
@@ -57,7 +60,8 @@ html {
 
 /* Simple fade in */
 .animate-fadeIn {
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeIn 0.6s ease-out both;
+  opacity: 1;
 }
 
 @keyframes fadeIn {
@@ -71,7 +75,8 @@ html {
 
 /* Scale up */
 .animate-scaleIn {
-  animation: scaleIn 0.5s ease-out forwards;
+  animation: scaleIn 0.5s ease-out both;
+  opacity: 1;
 }
 
 @keyframes scaleIn {
