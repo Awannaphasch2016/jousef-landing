@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 interface Step {
   number: string;
@@ -49,6 +50,38 @@ const steps: Step[] = [
 ];
 
 export const StepTimeline = () => {
+  const [visibleSteps, setVisibleSteps] = useState<Set<number>>(new Set());
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    // IntersectionObserver to detect when steps scroll into view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = stepRefs.current.indexOf(entry.target as HTMLDivElement);
+          if (entry.isIntersecting && index !== -1) {
+            setVisibleSteps((prev) => new Set(prev).add(index));
+          }
+        });
+      },
+      {
+        threshold: 0.2, // Trigger when 20% of element is visible
+        rootMargin: "0px 0px -100px 0px", // Start animation slightly before element fully in view
+      }
+    );
+
+    // Observe all step elements
+    stepRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      stepRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
+
   return (
     <section id="how-it-works" className="py-24 bg-white">
       <div className="container">
@@ -60,9 +93,13 @@ export const StepTimeline = () => {
           {/* Steps */}
           <div className="space-y-24">
             {steps.map((step, index) => (
-              <div key={index} className="relative">
+              <div
+                key={index}
+                ref={(el) => (stepRefs.current[index] = el)}
+                className={`relative timeline-step ${visibleSteps.has(index) ? "is-visible" : ""}`}
+              >
                 {/* Step number badge */}
-                <div className="absolute left-0 md:left-0 -translate-x-0 md:-translate-x-1/2">
+                <div className="absolute left-0 md:left-0 -translate-x-0 md:-translate-x-1/2 timeline-badge">
                   <div className="w-16 h-16 bg-primary rounded-xl flex flex-col items-center justify-center text-white shadow-lg shadow-primary/25">
                     <span className="text-xs font-medium opacity-80">Step</span>
                     <span className="text-lg font-bold">{step.number}</span>
@@ -70,7 +107,7 @@ export const StepTimeline = () => {
                 </div>
 
                 {/* Content */}
-                <div className="ml-24 md:ml-32">
+                <div className="ml-24 md:ml-32 timeline-content">
                   {/* Badge */}
                   <div className="inline-flex items-center px-4 py-1.5 bg-blue-50 rounded-full border border-blue-100 mb-4">
                     <span className="text-sm font-medium text-primary">{step.subtitle}</span>
