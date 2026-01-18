@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
+import { ScrollReveal } from "./ScrollReveal";
 
 // Demo project cards - Leadflow style portfolio showcase
 const demoProjects = [
@@ -34,24 +35,24 @@ export const DemoProjects = () => {
     <section id="demo-projekte" className="relative py-20 bg-white">
       <div className="container">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            So könnte deine neue{" "}
-            <span className="text-primary">Prozessarchitektur</span> aussehen
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Modernes Design trifft auf bewährte Strategien. Entdecke, wie wir
-            Unternehmen wie deines transformiert haben.
-          </p>
-        </div>
+        <ScrollReveal animation="fadeInUp">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              So könnte deine neue{" "}
+              <span className="text-primary">Prozessarchitektur</span> aussehen
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Modernes Design trifft auf bewährte Strategien. Entdecke, wie wir
+              Unternehmen wie deines transformiert haben.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Project Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {demoProjects.map((project, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-2xl bg-slate-100 aspect-[4/3] cursor-pointer"
-            >
+            <ScrollReveal key={index} animation="fadeInUp" delay={index * 100}>
+              <div className="group relative overflow-hidden rounded-2xl bg-slate-100 aspect-[4/3] cursor-pointer">
               {/* Image */}
               <img
                 src={project.image}
@@ -78,17 +79,20 @@ export const DemoProjects = () => {
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
-            </div>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* CTA Button */}
-        <div className="text-center mt-10">
-          <Button size="lg" className="px-8">
-            Jetzt Projekt starten
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
-        </div>
+        <ScrollReveal animation="fadeInUp" delay={400}>
+          <div className="text-center mt-10">
+            <Button size="lg" className="px-8">
+              Jetzt Projekt starten
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

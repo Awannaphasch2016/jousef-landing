@@ -1,4 +1,5 @@
 import { Building2, Briefcase, Users, ShoppingBag, Rocket, Award } from "lucide-react";
+import { ScrollReveal } from "./ScrollReveal";
 
 // Target audience segments - Leadflow "Für wen wir arbeiten" style
 const audiences = [
@@ -64,35 +65,36 @@ export const TargetAudience = () => {
       {/* Target Audience Grid */}
       <div id="zielgruppe" className="relative py-20">
         <div className="container">
-          <div className="text-center mb-12">
-            <p className="text-primary font-medium mb-2">Für wen wir arbeiten</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Ist dein Unternehmen dabei?
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Wir arbeiten mit ambitionierten Unternehmen, die bereit sind,
-              ihre Prozesse auf das nächste Level zu heben.
-            </p>
-          </div>
+          <ScrollReveal animation="fadeInUp">
+            <div className="text-center mb-12">
+              <p className="text-primary font-medium mb-2">Für wen wir arbeiten</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Ist dein Unternehmen dabei?
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Wir arbeiten mit ambitionierten Unternehmen, die bereit sind,
+                ihre Prozesse auf das nächste Level zu heben.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {audiences.map((audience, index) => {
               const Icon = audience.icon;
               return (
-                <div
-                  key={index}
-                  className="group p-6 rounded-2xl bg-white border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                    <Icon className="w-6 h-6 text-primary" />
+                <ScrollReveal key={index} animation="fadeInUp" delay={index * 100}>
+                  <div className="group p-6 rounded-2xl bg-white border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all h-full">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                      <Icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">
+                      {audience.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {audience.description}
+                    </p>
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
-                    {audience.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {audience.description}
-                  </p>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
@@ -102,32 +104,33 @@ export const TargetAudience = () => {
       {/* Benefits Section */}
       <div id="vorteile" className="relative py-20">
         <div className="container">
-          <div className="text-center mb-12">
-            <p className="text-primary font-medium mb-2">Deine Vorteile</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Konkrete Vorteile für dein Unternehmen
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Messbare Ergebnisse statt leerer Versprechen
-            </p>
-          </div>
+          <ScrollReveal animation="fadeInUp">
+            <div className="text-center mb-12">
+              <p className="text-primary font-medium mb-2">Deine Vorteile</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Konkrete Vorteile für dein Unternehmen
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Messbare Ergebnisse statt leerer Versprechen
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="text-center p-6 rounded-2xl bg-white border border-slate-200"
-              >
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                  {benefit.value}
+              <ScrollReveal key={index} animation="scaleIn" delay={index * 100}>
+                <div className="text-center p-6 rounded-2xl bg-white border border-slate-200 h-full">
+                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                    {benefit.value}
+                  </div>
+                  <div className="text-lg font-semibold text-foreground mb-1">
+                    {benefit.label}
+                  </div>
+                  <p className="text-muted-foreground text-sm">
+                    {benefit.description}
+                  </p>
                 </div>
-                <div className="text-lg font-semibold text-foreground mb-1">
-                  {benefit.label}
-                </div>
-                <p className="text-muted-foreground text-sm">
-                  {benefit.description}
-                </p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

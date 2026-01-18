@@ -2,6 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { testimonials } from "@/config/content";
 import { Star, Quote, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { ScrollReveal } from "./ScrollReveal";
 
 export const SuccessStories = () => {
   return (
@@ -11,24 +12,24 @@ export const SuccessStories = () => {
     >
       <div className="container">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-primary font-medium mb-2">Bewährter Ablauf</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Erfolgsgeschichten
-          </h2>
-          <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-            So helfen wir echten Unternehmen, ihre Prozesse zu transformieren
-            und nachhaltig zu wachsen.
-          </p>
-        </div>
+        <ScrollReveal animation="fadeInUp">
+          <div className="text-center mb-16">
+            <p className="text-primary font-medium mb-2">Bewährter Ablauf</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              Erfolgsgeschichten
+            </h2>
+            <p className="text-slate-300 text-lg max-w-2xl mx-auto">
+              So helfen wir echten Unternehmen, ihre Prozesse zu transformieren
+              und nachhaltig zu wachsen.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Success Stories Grid */}
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="group relative bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-primary/50 transition-all"
-            >
+            <ScrollReveal key={index} animation="fadeInUp" delay={index * 150}>
+              <div className="group relative bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-primary/50 transition-all h-full">
               {/* Quote icon */}
               <div className="absolute -top-4 left-8">
                 <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
@@ -97,21 +98,24 @@ export const SuccessStories = () => {
                   <ArrowRight className="w-3 h-3" />
                 </span>
               </div>
-            </div>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-slate-600 text-white hover:bg-slate-800 hover:border-primary"
-          >
-            Alle Erfolgsgeschichten ansehen
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
-        </div>
+        <ScrollReveal animation="fadeInUp" delay={500}>
+          <div className="text-center mt-12">
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-slate-600 text-white hover:bg-slate-800 hover:border-primary"
+            >
+              Alle Erfolgsgeschichten ansehen
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
