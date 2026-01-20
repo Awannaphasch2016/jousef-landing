@@ -21,7 +21,7 @@ module.exports = {
       },
       fontSize: {
         // GigRadar-style large headings
-        'display': ['4.5rem', { lineHeight: '1.1', fontWeight: '600' }],  // ~70px
+        'display': ['5.85rem', { lineHeight: '1.1', fontWeight: '600' }],  // ~93.6px (matches GigRadar)
         'display-sm': ['2.75rem', { lineHeight: '1.15', fontWeight: '600' }],  // ~43px
       },
       colors: {
