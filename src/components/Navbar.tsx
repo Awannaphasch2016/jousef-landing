@@ -38,7 +38,7 @@ export const Navbar = () => {
             <a
               rel="noreferrer noopener"
               href="/"
-              className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-2 text-foreground hover:text-primary transition-all duration-200"
             >
               {/* Logo icon */}
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
@@ -73,7 +73,7 @@ export const Navbar = () => {
                       key={label}
                       href={href}
                       onClick={() => setIsOpen(false)}
-                      className="px-4 py-2 text-foreground hover:bg-blue-50 rounded-lg transition-colors"
+                      className="px-4 py-2 text-foreground hover:bg-blue-50 rounded-lg transition-all duration-200"
                     >
                       {label}
                     </a>
@@ -93,7 +93,7 @@ export const Navbar = () => {
                 rel="noreferrer noopener"
                 href={route.href}
                 key={i}
-                className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-blue-50 rounded-lg transition-colors"
+                className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200"
               >
                 {route.label}
                 {route.hasDropdown && <ChevronDown className="w-4 h-4" />}
