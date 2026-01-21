@@ -1,24 +1,25 @@
 /**
- * Landing Page - GigRadar.io Style
- * Light theme with blue gradient accents
- * SaaS/Tech aesthetic
+ * Landing Page - Flowstack Systems Style
+ * Conversion-optimized section sequence
+ * KI-Automatisierung für Agenturen & B2B-Dienstleister
  */
 
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Sponsors } from "./components/Sponsors";
-import { StepTimeline } from "./components/StepTimeline";
-import { CaseStudies } from "./components/CaseStudies";
-import { Comparison } from "./components/Comparison";
-import { AutomationFeatures } from "./components/AutomationFeatures";
-import { FeatureMatrix } from "./components/FeatureMatrix";
-import { StatsTrust } from "./components/StatsTrust";
+import { EmpathyOpening } from "./components/EmpathyOpening";
+import { ProblemMirror } from "./components/ProblemMirror";
+import { SolutionPreview } from "./components/SolutionPreview";
+import { FlowstackSystem } from "./components/FlowstackSystem";
+// import { CaseStudies } from "./components/CaseStudies"; // TEMPORÄR AUSGEBLENDET
+import { CtaInline } from "./components/CtaInline";
+import { Outcomes } from "./components/Outcomes";
+import { TargetAudience } from "./components/TargetAudience";
 import { Services } from "./components/Services";
-import { AdditionalProducts } from "./components/AdditionalProducts";
-import { Team } from "./components/Team";
-import { Testimonials } from "./components/Testimonials";
+import { Timeline } from "./components/Timeline";
+import { TeamSection } from "./components/TeamSection";
+import { CtaFinal } from "./components/CtaFinal";
 import { FAQ } from "./components/FAQ";
-import { Cta } from "./components/Cta";
 import { Footer } from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
 import "./App.css";
@@ -27,35 +28,60 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* Section 1: Hero with floating icons */}
+
+      {/* 1. HERO */}
       <Hero />
-      {/* Section 2: Social proof logos */}
+
+      {/* 2. TRUST STRIP */}
       <Sponsors />
-      {/* Section 3: How It Works - Step Timeline */}
-      <StepTimeline />
-      {/* Section 4: Case Studies with ROI metrics */}
+
+      {/* 3. EMPATHIE-OPENING */}
+      <EmpathyOpening />
+
+      {/* 4. PROBLEM MIRROR */}
+      <ProblemMirror />
+
+      {/* 5. LÖSUNG-PREVIEW */}
+      <SolutionPreview />
+
+      {/* 6. DAS FLOWSTACK-SYSTEM */}
+      <FlowstackSystem />
+
+      {/* 7. FALLSTUDIEN - TEMPORÄR AUSGEBLENDET (keine Kunden noch)
+         Um wieder zu aktivieren: Kommentar entfernen
       <CaseStudies />
-      {/* Section 5: Comparison - Manual vs Automated */}
-      <Comparison />
-      {/* Section 6: Automation Features - Sardor + Laziza AI */}
-      <AutomationFeatures />
-      {/* Section 7: Feature Comparison Matrix */}
-      <FeatureMatrix />
-      {/* Section 8: Stats and Trust indicators */}
-      <StatsTrust />
-      {/* Section 9: Features/Services */}
+      */}
+
+      {/* 8. CTA INLINE #1 */}
+      <CtaInline />
+
+      {/* 9. OUTCOMES */}
+      <Outcomes />
+
+      {/* 10. FÜR WEN */}
+      <TargetAudience />
+
+      {/* 11. LEISTUNGEN */}
       <Services />
-      {/* Section 10: Additional Products - CRM + Inbound */}
-      <AdditionalProducts />
-      {/* Section 11: Team - Core + Advisors */}
-      <Team />
-      {/* Section 12: Testimonials/Reviews */}
-      <Testimonials />
-      {/* Section 13: FAQ */}
+
+      {/* 12. ABLAUF */}
+      <Timeline />
+
+      {/* 13. CTA INLINE #2 */}
+      <CtaInline variant="secondary" />
+
+      {/* 14. TEAM */}
+      <TeamSection />
+
+      {/* 15. FINALER CTA */}
+      <CtaFinal />
+
+      {/* 16. FAQ */}
       <FAQ />
-      {/* Section 14: Final CTA */}
-      <Cta />
+
+      {/* 17. FOOTER */}
       <Footer />
+
       <ScrollToTop />
     </>
   );
